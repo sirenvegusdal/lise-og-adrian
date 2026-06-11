@@ -196,16 +196,14 @@
     <svg class="liten" viewBox="0 0 120 120"><use href="#rose"/></svg>
   </div>
 
-  <a class="knapp" id="lastOpp" href="#" rel="noopener">Last opp bilder fra dagen</a>
-
+ <a class="knapp" id="lastOpp" href="#" target="_blank" rel="noopener noreferrer">Last opp bilder fra dagen</a>
   <footer>Tusen takk for at du deler &hearts;</footer>
 </main>
-
 <script>
   document.getElementById("dato").textContent = OPPSETT.dato || "";
   const knapp = document.getElementById("lastOpp");
-  if (OPPSETT.opplastingslenke.startsWith("https://")) {
-    knapp.href = OPPSETT.opplastingslenke;
+  if (OPPSETT.opplastingsLenke.startsWith("https://")) {
+    knapp.href = OPPSETT.opplastingsLenke;
     document.getElementById("roserad").hidden = false;
   } else {
     document.getElementById("varsel").hidden = false;
